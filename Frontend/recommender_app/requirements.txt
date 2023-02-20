@@ -1,0 +1,8 @@
+Flask==2.2.2
+gensim==4.2.0
+joblib==1.2.0
+numpy==1.23.4
+pandas==1.5.1
+scikit_learn==1.1.2
+waitress==2.1.2
+Werkzeug==2.2.2

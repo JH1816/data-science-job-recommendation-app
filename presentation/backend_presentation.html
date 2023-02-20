@@ -1,0 +1,300 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/white.css">
+    <style>
+        h1{
+            text-transform: inherit !important;
+        }
+        table, th{
+            border: 1px solid black !important;
+        }
+        td{
+            border: 0.5px solid black !important;
+        }
+        .column{
+            float: left;
+            width: 50%;
+        }
+        .row:after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        #rcorners1{
+            border-radius: 25px;
+            background: #A7DBD8;
+            padding: 20px;
+            width: 200px;
+            height: 100px;
+            font-size: 40px;
+            text-align: center;
+            vertical-align: middle;
+            justify-content: center;
+            display:-webkit-box;
+            -webkit-box-pack:center;
+            -webkit-box-align:center;
+        }
+        .arrow {
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            size: 18px;
+        }
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+        .left {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg);
+        }
+        #centralised{
+            position: absolute;
+            bottom: 0px;
+            text-align: center;
+            width: 100%;
+        }
+        
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+            <h1 class="r-fit-text" style="text-transform: inherit">Streamlining the TalentConnect experience</h1><br>
+            Javier Tham Jun Long<br>
+            Leon Tan<br>
+            Yang Qiman<br>
+            Zhang Chenxiao<br>
+        </section>
+        <section>
+            <b>
+                <h3 style="text-transform: inherit">Scope of presentation</h3>
+            </b>
+            <ol type="1">
+                <p class="fragment" data-fragment-index="1">1. Background and problem statement</p>
+                <p class="fragment" data-fragment-index="2">2. Solution</p>
+                <p class="fragment" data-fragment-index="3">3. Summary and further action</p>
+            </ol>
+        </section>
+        <section>
+            <section>
+                <div class="r-stack">
+                    <h1 class="r-fit-text fragment fade-out" data-fragment-index="2">TalentConnect is a great resource for NUS students</h1>
+                    <h1 class="r-fit-text fragment current-visible" data-fragment-index="2">Are these features being capitalised on?</h1>
+                </div>
+                <ul>
+                    <li>Job search</li>
+                    <li>Integrated Academic Profile</li>
+                    <li>Pre-approved UPIP/FYI positions</li>
+                    <li>Resume feedback</li>
+                    <li>Mock interviews</li>
+                    <li>Career guidance</li>
+                </ul>
+                <p class="fragment" style="color:red;" data-fragment-index="1">but...</p>
+            </section>
+            <section>
+                <h1 class="r-fit-text">We surveyed 25 NUS Data Science students...</h1>
+                <p class="fragment">
+                    "What do you look for in a job?"
+                    <img src="assets/plot1.png" width="550" height="auto">
+                </p>
+            </section>
+            <section>
+                <h1 class="r-fit-text">...to understand how the portal could be improved.</h1>
+                <p class="fragment r-fit-text" data-fragment-index="1">"Describe your TalentConnect experience in one word."</p>
+                <div class="r-stack">
+                    <p class="fragment current-visible" style="font-size:96px; color:red;" data-fragment-index="2"><b>Confusing</b></p>
+                </div>
+            </section>
+            <section>
+                <h1 class="r-fit-text">Filters can be overwhelming to navigate.</h1>
+                <video data-autoplay src="assets/filters.mov"></video>
+                <figcaption><small><br>Intimidating!</small></figcaption>
+            </section>
+            <section>
+                <h1 class="r-fit-text">Intuition: Relevance is key!</h1>
+                <table class="r-fit-text fragment" data-fragment-index="1">
+                    <tr>
+                        <th class="fragment" data-fragment-index="1">Problem</th>
+                        <th class="fragment" data-fragment-index="2">Solution</th>
+                    </tr>
+                    <tr>
+                        <td class="fragment" data-fragment-index="1">Too many available jobs to search through</td>
+                        <td rowspan="3" class="fragment" data-fragment-index="2">Use more data points to generate relevant recommendations for users</td>
+                    </tr>
+                    <tr>
+                        <td class="fragment" data-fragment-index="1">Overwhelming number of filters</td>
+                    </tr>
+                    <tr>
+                        <td class="fragment" data-fragment-index="1">Current job recommendations may be irrelevant</td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1 class="r-fit-text">Analysing skills required for common data-related roles</h1>
+                <div class="row">
+                    <div class="column">
+                        <figure>
+                            <img src="assets/cluster3.png">
+                            <figcaption><small>Data Scientist role</small></figcaption>
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <figure>
+                            <img src="assets/cluster1.png">
+                            <figcaption><small>Data Analytics role</small></figcaption>
+                        </figure>
+                    </div>
+            </section>
+            <section>
+                <h1 class="r-fit-text">Recommendation engine</h1>
+                <img src="assets/diagram.png">
+            </section>
+            <section>
+                <h1 class="r-fit-text">All parties stand to benefit from this initiative</h1>
+                <figure>
+                    <div id="rcorners1" style="position:absolute; top:220px; left:0px">Users</div>
+                    <div id="rcorners1" style="background-color:#F38630; position:absolute; top:220px; right:0px">Employers</div>
+                    
+                    <div data-id="box" style="height:9px; width:400px; background-color: black; position:absolute;top:289px;left:280px"></div>
+                    <p style="position:absolute; top:190px;left:240px; font-size:120px">&#8592;</p>
+                    <p style="position:absolute; top:190px;right:240px; font-size:120px">&#8594;</p>
+                </figure>
+            </section>
+            <section>
+                <h1 class="r-fit-text">We surveyed 25 NUS Data Science students...</h1>
+                <p>
+                    "What do you look for in a job?"
+                    <img src="assets/plot2.png" width="550" height="auto">
+                </p>
+            </section>
+            <section>
+                <h1 class="r-fit-text">All parties stand to benefit from this initiative</h1>
+                <figure>
+                    <div id="rcorners1" style="position:absolute; top:220px; left:0px">Users</div>
+                    <div class="fragment" id="rcorners1" style="height:50px; width:200px; font-size: 32px; background-color:#E0E4CC; position:absolute; top:180px; right:360px">TalentConnect</div>
+                    <div id="rcorners1" style="background-color:#F38630; position:absolute; top:220px; right:0px">Employers</div>
+                    
+                    <div data-id="box" style="height:9px; width:400px; background-color: black; position:absolute;top:289px;left:280px"></div>
+                    <p style="position:absolute; top:190px;left:240px; font-size:120px">&#8592;</p>
+                    <p style="position:absolute; top:190px;right:240px; font-size:120px">&#8594;</p>
+                </figure>
+            </section>
+        </section>
+        <section>
+            <section data-auto-animate>
+                <h1 class="r-fit-text">Our model has 2 main criteria:</h1>
+            </section>
+            <section data-auto-animate>
+                <h1 class="r-fit-text" style="margin-top:0px">Our model has 2 main criteria:</h1>
+                <div class="row">
+                    <div class="column">
+                        <h1 class="fragment fade-down" data-fragment-index="1" style="color:#FA6900;">Speed</h1> 
+                    </div>
+                    <div class="column">
+                        <h1 class="fragment fade-up" data-fragment-index="2" style="color:#69D2E7">Relevance</h1>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h1 class="r-fit-text">How does our model work?</h1>
+                <p class="r-fit-text"><text style="color:#FA6900;">Match</text> each user to a set of jobs, using words from their user profile.<br></p>
+                <div class="row">
+                    <p class="fragment" data-fragment-index="1">1. Converting words to numbers</p>
+                    <p class="fragment" data-fragment-index="2">
+                        2. Finding relevant jobs
+                    </p> 
+                </div>                          
+            </section>
+            <section>
+                <h1 class="r-fit-text">Converting words to numbers</h1>
+                <div class="row">
+                    <div class="column">
+                        <p class="fragment" data-fragment-index="1" style="text-align:left">1. word2vec</p>
+                        <p class="fragment" data-fragment-index="2" style="text-align:left">
+                            2. TF-IDF<br>
+                            <small>(term frequency-inverse document frequency)</small>
+                        </p> 
+                    </div>
+                    <div class="column">
+                        <img class="fragment" data-fragment-index="2" src="assets/tfidf.png">
+                    </div>
+                </div> 
+            </section>
+            <section>
+                <h1 class="r-fit-text">How do we find relevant jobs?</h1>
+                <div class="row">
+                    <div class="column">
+                        <p class="fragment fade-in-then-semi-out" data-fragment-index="1" style="text-align:left">1. Cosine similarity</p>
+                        <p class="fragment" data-fragment-index="2" style="text-align:left">
+                            2. KNN
+                            <br><small>(K-nearest neighbours)</small>
+                        </p>
+                    </div>
+                    <div class="column">
+                        <div class="r-stack">
+                            <img class="fragment fade-in-then-out" data-fragment-index="1" style="width:900px; height:auto" src="assets/cosine.jpg">
+                            <img class="fragment" data-fragment-index="2" style="width:80%"src="assets/KNN.png"> 
+                        </div>    
+                    </div>
+                </div>  
+            </section>
+            <section>
+                <h1 class="r-fit-text">Recommendation engine</h1>
+                <img src="assets/diagram2.png">
+            </section>
+        </section>
+        <section>
+            <section>
+                <h1 class="r-fit-text">In summary, our proposed solution addresses key issues:</h1>
+                <ul>
+                    <li>Users get relevant job recommendations</li>
+                    <li>Employers get more suitable candidates</li>
+                    <li>The platform's efficiency is increased</li>
+                </ul>
+            </section>
+            <section>
+                <h1 class="r-fit-text" style="margin-top:0px">Some possible avenues to explore:</h1>
+                <div class="row">
+                    <p>Collect <text style="color:#FA6900">feedback </text> to determine accuracy of model.<br></p>
+                    <p><small>(from both students and employers)</small></p>
+                </div>
+                </ul>
+            </section>
+            <section>
+                <h1 class="r-fit-text" style="margin-top:0px">Some possible avenues to explore:</a></h1>
+                <div class="row">
+                    Clustering the available jobs on TalentConnect and
+                    analysing data-related roles in various industries
+                    <img src="assets/scatter.png" style="width:70%">
+                </div>    
+            </section>
+            <section>
+                <h1 class="r-fit-text">Eventually, we hope to achieve efficient automation.</h1>
+                <figure>
+                    <div id="rcorners1" style="font-size: 28px; background-color:#E0E4CC; position:absolute; top:220px; left:0px">TalentConnect<br><small>(representing users)</small></div>
+                    <div id="rcorners1" style="font-size: 28px; background-color:#E0E4CC; position:absolute; top:220px; right:0px">TalentConnect<br><small>(representing employers)</small></div>
+                    <div data-id="box" style="height:9px; width:400px; background-color: black; position:absolute;top:289px;left:280px"></div>
+                    <p style="position:absolute; top:190px;left:240px; font-size:120px">&#8592;</p>
+                    <p style="position:absolute; top:190px;right:240px; font-size:120px">&#8594;</p>
+                </figure>
+                <div><small>Minimised human input, powered by our recommendation engine!</small></div><br><br><br><br><br>
+                <text class="fragment"><small>e.g. using OCR to extract information from resumes</small></text>                
+            </section>
+        </section>
+        <section>
+            <h1>Thank you!</h1>
+        </section>
+      </div>
+    </div>
+    <script src="dist/reveal.js"></script>
+    <script>
+      Reveal.initialize();
+    </script>
+  </body>
+</html>
